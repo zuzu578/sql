@@ -1,5 +1,22 @@
 # sql
+# Bulk insert
 
+mysql 에서 대량으로 insert를 수행하게 해주는 sql문이다.
+# 예제
+```mysql
+# 일반 insert
+
+insert into table (a,b,c) values(1,2,3);
+insert into table (a,b,c) values(4,5,6);
+insert into table (a,b,c) values(7,8,9);
+
+# bulk
+
+insert into table(a,b,c) values (1,2,3),(4,5,6),(7,8,9);
+
+이외에도 대용량 데이터파일을 가지고 db테이블을 만들어 insert 할수 있는 기능도 제공한다. 
+
+```
 # transction 의 개념
 
 트랜잭션이란 데이터베이스의 상태를 변화시키기 위해서 수행하는 작업의 단위를 의미
