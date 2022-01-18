@@ -1,4 +1,19 @@
 # sql
+
+# 시퀄라이즈에서 paranoid 설정후 강제 삭제하는법
+시퀄라이즈에서 paranoid 를 모델에 설정하면 소프트 삭제가 되는데 , 강제삭제를 원한다면 다음과같이한다. 
+
+```typescript
+export const deleteEmployeeScheduleByIdx = (option: string) => {
+  return ScheduleEmployee.destroy({
+    where: {
+      scheduleIdx: option,
+    },
+    force: true,
+  });
+};
+
+```
 # Bulk insert
 
 mysql 에서 대량으로 insert를 수행하게 해주는 sql문이다.
