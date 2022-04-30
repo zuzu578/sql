@@ -1,4 +1,16 @@
+
 # sql
+
+# mysql
+
+공백 구분없이 검색할때
+
+```mysql
+SELECT sbj FROM test WHERE REPLACE(sbj, ' ', '') LIKE '%감자고구마%';
+
+출처: https://gampol.tistory.com/entry/WHERE-조건에-공백-여부-포함하여-검색하기 [유효하지 않네]
+
+```
 
 # 데이터베이스 정규화
 이상문제를 해결하기 위해 속성들 끼리 종속관계를 분석하여 ,여러개의 관계형으로 분해하는 과정이다. 
